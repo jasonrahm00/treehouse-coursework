@@ -15,12 +15,15 @@ h1 {
 h2 {
   font-size: 3.3125em; /* 53px/16px */
   font-weight: normal;
-  text-decoration: underline;
+  line-height: 1.1;
+  margin-bottom: .5em; /* 26px */
 }
 
 h3 {
   color: #48525c;
   font-size: 1.25em; /* 20px/16px */
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
 }
 
 .main-header {
@@ -29,7 +32,16 @@ h3 {
 
 .primary-content,
 .secondary-content {
+  margin: auto;
   width: 60%;
+}
+
+.wildlife {
+  background-color: #434a52;
+  border-top: 10px solid #ffa949;
+  color: white;
+  margin: 105px 0 60px;
+  padding: 18% 24%;
 }
 
 .primary-content,
@@ -47,7 +59,7 @@ h3 {
 }
 
 #main-footer {
-  border-bottom: solid 10px #ffa949;
+  border-bottom: 10px solid #ffa949;
   padding-bottom: 60px;
   padding-top: 60px;
 }
