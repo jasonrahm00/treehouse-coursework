@@ -148,8 +148,31 @@ LAYOUT STYLES
 
 
 
+/********************************** 
+FLOATED COLUMNS
+**********************************/
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.resorts {
+  float: left;
+}
+
+.tips {
+  float: right;
+}
 
 
 
+/********************************** 
+FLOAT CLEARFIX
+**********************************/
 
-
+.group:after {
+  clear: both;
+  content: "";
+  display: table;
+}
