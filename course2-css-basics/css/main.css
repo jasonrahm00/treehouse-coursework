@@ -216,3 +216,63 @@ FLOAT CLEARFIX
   content: "";
   display: table;
 }
+
+
+
+/********************************** 
+MEDIA QUERIES
+**********************************/
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+  
+  .wildlife {
+    margin: 50px 0 20px;
+    padding: 10% 12%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+  
+  .arrow {
+    display: none;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+  
+  .main-footer {
+    padding: 20px 0;  
+  }
+  
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+  
+  .primary-content,
+  .secondary-content {
+    border-top: none;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+  
+  .title {
+    border: none;
+    font-size: 1.3rem;
+  }
+}
