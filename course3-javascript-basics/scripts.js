@@ -1,5 +1,5 @@
-var adjective = prompt("Please type an adjective");
-var verb = prompt("Please type a verb");
-var noun = prompt ("Please type a noun");
-var sentence = "<h2>There once was an " + adjective + " programmer who wanted to use JavaScript to " + verb + " the " + noun + ".</h2>";
-document.write(sentence);
+var input = prompt("Please type a number");
+var topNumber = parseInt(input);
+var randomNumber = Math.floor(Math.random() * topNumber) + 1;
+var message = "<p>" + randomNumber + " is a number between 1 and " + topNumber + ".</p>";
+document.write(message);
