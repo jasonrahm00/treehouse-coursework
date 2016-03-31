@@ -1,7 +1,7 @@
-var input1 = prompt("Please type a starting number");
-var bottomNumber = parseInt(input1);
-var input2 = prompt("Please type another, larger number");
-var topNumber = parseInt(input2);
-var randomNumber = Math.floor(Math.random() * (topNumber - bottomNumber + 1)) + bottomNumber;
-var message = "<p>" + randomNumber + " is a number between " + bottomNumber + " and " + topNumber + ".</p>";
-document.write(message);
+var randomNumber = Math.floor(Math.random() * 6) + 1;
+var guess = prompt("I am thinking of a number between 1 and 6. What is it?");
+if (parseInt(guess) === randomNumber) {
+  alert("My guessed right");
+} else {
+  alert("My number was " + randomNumber + ". You chose " + guess + ". You guessed wrong.");
+}
