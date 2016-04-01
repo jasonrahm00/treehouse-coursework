@@ -1,27 +1,38 @@
-var correctGuess = false;
+// Quiz begins, no answers correct
+var correct = 0;
 
-//Generate a random number between 1 and 6
-var randomNumber = Math.floor(Math.random() * 6) + 1;
-var guess = parseInt(prompt("Ia m thinking of a number between 1 and 6. What is it?"));
-
-/*These conditional statements check to see if the user chooses the correct number. If it's higher or lower, they get to choose again.*/
-if (guess === randomNumber) {
-  correctGuess = true;
-} else if (guess < randomNumber) {
-  var guessMore = prompt("Try again. The number I am thinking of is more than " + guess);
-  if (parseInt(guessMore) === randomNumber) {
-    correctGuess = true;
-  }
-} else if (guess > randomNumber) {
-  var guessMore = prompt("Try again. The number I am thinking of is less than " + guess);
-  if (parseInt(guessMore) === randomNumber) {
-    correctGuess = true;
-  }
+//Asking questions
+var answer1 = prompt("Name a programming language that's also a gem");
+if (answer1.toUpperCase() === 'RUBY') {
+  correct += 1;
+}
+var answer2 = prompt("Name a programming language that's also a snake");
+if (answer2.toUpperCase() === 'PYTHON') {
+  correct += 1;
+}
+var answer3 = prompt("What language do you use to style web pages?");
+if (answer3.toUpperCase() === 'CSS') {
+  correct += 1;
+}
+var answer4 = prompt("What language do you use to build the structure of web pages?");
+if (answer4.toUpperCase() === 'HTML') {
+  correct += 1;
+}
+var answer5 = prompt("What language do you use to add interactivity to a web page?")
+if (answer5.toUpperCase() === 'JAVASCRIPT') {
+  correct += 1;
 }
 
-//Print a message telling the user whether or not they guessed the right number
-if (correctGuess) {
-  document.write("<p>You guessed the number!</p>");
+//Output results
+document.write("<p>You got " + correct + " out of 5 questions correct.</p>");
+
+//Output rank
+if (correct === 5) {
+  document.write("<p><strong>You earned a gold star!</strong></p>");
+} else if (correct >= 3) {
+  document.write("<p><strong>You earned a silver star!</strong></p>");
+} else if (correct >= 1) {
+  document.write("<p><strong>You earned a bronze star!</strong></p>");
 } else {
-  document.write("<p>Sorry. The number was " + randomNumber + ".</p>");
+  document.write("<p><strong>No star for you!</strong></p>");
 }
