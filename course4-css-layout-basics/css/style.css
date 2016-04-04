@@ -1,43 +1,120 @@
 /************************************** 
-  Base Element Styles
+  BASE ELEMENT STYLES
 **************************************/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  color: #3a3a3a;	
+  color: #3a3a3a;
+  font-family: 'Varela Round', sans-serif;
   line-height: 1.6;
 }
 
+p {
+  font-size: .95em;
+  margin-bottom: 1.5em;
+}
+
+h2,
+h3,
 a { 
-  color: #fff;
+  color: #093a58;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
   text-decoration: none;
 }
 
 
-
 /************************************** 
-  Base Layout Styles
+  BASE LAYOUT STYLES
 **************************************/
 
-/* ---- Layout Containers ---- */
+/* ---- Navigation ---- */
 
 .name {
-  margin: 0;
+  font-size: 1.25em;
+}
+
+.name,
+.main-nav li {
+  background: #fff;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.main-nav a {
+  color: #3acec2;
+  font-size: .95em;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: #093a58;
 }
 
 /* ---- Layout Containers ---- */
 
 .container {
-  margin: 0 auto;
-  width: 70%;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .main-header {
   background: #3acec2;
-  padding: 1em 0;
+  margin-bottom: 30px;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  text-align: center;
 }
 
 .main-footer {
   background: #d9e4ea;
   padding: 2em 0;
   text-align: center;
+}
+
+.name a,
+.main-nav a {
+  display: block;
+  padding: 10px 15px;
+}
+
+
+
+/************************************** 
+  MEDIA QUERIES
+**************************************/
+
+@media (min-width: 769px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 80%;
+  }
+  
+  .main-nav li {
+    margin-right: -5px;  
+  }
+  
+  .name,
+  .main-nav li {
+    display: inline-block;  
+  }
+  
+  .name {
+    width: 240px;
+  }
+  
+  .wrapper {
+    min-height: calc(100vh - 89px);
+  }
 }
