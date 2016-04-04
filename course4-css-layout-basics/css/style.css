@@ -95,6 +95,7 @@ a {
 **************************************/
 
 @media (min-width: 769px) {
+  
   .container {
     margin: 0 auto;
     max-width: 1150px;
@@ -117,4 +118,14 @@ a {
   .wrapper {
     min-height: calc(100vh - 89px);
   }
+  
+  .col {
+    display: inline-block;
+    margin-right: -4px;
+    padding-left: 1em;
+    padding-right: 1em;
+    vertical-align: top;
+    width: 50%;
+  }
+  
 }
