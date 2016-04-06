@@ -14,7 +14,7 @@ body {
 
 p {
   font-size: .95em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
 }
 
 h2,
@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 
 /************************************** 
   BASE LAYOUT STYLES
@@ -41,14 +45,12 @@ a {
 
 .name {
   font-size: 1.25em;
+  font-weight: bold;
+  margin: 0;
 }
 
-.name,
-.main-nav li {
-  background: #fff;
-  margin-bottom: 6px;
-  margin-top: 6px;
-  text-align: center;
+.main-nav: {
+  margin-top: 5px;
 }
 
 .name a,
@@ -70,25 +72,43 @@ a {
 
 /* ---- Layout Containers ---- */
 
-.container {
+.banner {
+  background: #3acec2;
+  color: #fff;
+  margin-bottom: 60px;
+  padding: 3.2em 0;
+}
+
+.col {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-.main-header {
-  background: #3acec2;
-  margin-bottom: 30px;
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
-}
-
-.main-footer {
-  background: #d9e4ea;
-  padding: 2em 0;
+footer,
+.banner {
   text-align: center;
 }
 
+.main-header {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 
+footer {
+  background: #d9e4ea;
+  padding: 2em 0;
+  margin-top: 30px;
+}
+
+/* ---- Page Elements ---- */
+
+.headline {
+  margin-bottom: 0;
+}
+
+.logo {
+  width: 190px;
+}
 
 /************************************** 
   MEDIA QUERIES
@@ -96,7 +116,35 @@ a {
 
 @media (min-width: 769px) {
   
-  /* ---- Basic Layout ---- */
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  .name,
+  .col {
+    float: left;
+  }
+  
+  .primary,
+  .secondary {
+    width: 50%;
+  }
+  
+  .main-nav {
+    float: right;
+  }
+  
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  .tagline {
+    font-size: 1.4em;
+  }
+  
+  /* ---- Float Clearfix ---- */
   
   .container::after {
     clear: both;
@@ -104,53 +152,21 @@ a {
     display: table;
   }
   
+}
+
+@media (min-width: 1025px) {
+  
   .container {
-    margin: 0 auto;
     max-width: 1150px;
     width: 80%;
-  }
-  
-  .feat-img {
-    border: 1px solid #d9e4ea;
-    float: left;
-    margin: 5px 25px 25px 0;
-    padding: 10px;
-    width: 300px;
-  }
-  
-  .wrapper {
-    min-height: calc(100vh - 89px);
-  }
-  
-  /* ---- Columns ---- */
-  
-  .col {
-    float: left;
-    padding-left: 1em;
-    padding-right: 1em;
   }
   
   .primary {
     width: 40%;
   }
   
-  .secondary {
-    width: 60%;
+  .secondary,
+  .tertiary {
+    width: 30%;
   }
-  
-  /* ---- Navigation ---- */
-  
-  .main-nav {
-    float: right;  
-  }
-  
-  .main-nav li,
-  .name {
-    float: left;
-  }
-  
-  .main-nav li {
-    margin-left: 12px;
-  }
-  
 }
