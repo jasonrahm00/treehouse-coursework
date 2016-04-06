@@ -51,6 +51,13 @@ a {
   text-align: center;
 }
 
+.name a,
+.main-nav a {
+  display: block;
+  padding: 10px 15px;
+  text-align: center;
+}
+
 .main-nav a {
   color: #3acec2;
   font-size: .95em;
@@ -73,19 +80,12 @@ a {
   margin-bottom: 30px;
   padding-bottom: 1.5em;
   padding-top: 1.5em;
-  text-align: center;
 }
 
 .main-footer {
   background: #d9e4ea;
   padding: 2em 0;
   text-align: center;
-}
-
-.name a,
-.main-nav a {
-  display: block;
-  padding: 10px 15px;
 }
 
 
@@ -96,36 +96,61 @@ a {
 
 @media (min-width: 769px) {
   
+  /* ---- Basic Layout ---- */
+  
+  .container::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
   .container {
     margin: 0 auto;
     max-width: 1150px;
     width: 80%;
   }
   
-  .main-nav li {
-    margin-right: -5px;  
-  }
-  
-  .name,
-  .main-nav li {
-    display: inline-block;  
-  }
-  
-  .name {
-    width: 240px;
+  .feat-img {
+    border: 1px solid #d9e4ea;
+    float: left;
+    margin: 5px 25px 25px 0;
+    padding: 10px;
+    width: 300px;
   }
   
   .wrapper {
     min-height: calc(100vh - 89px);
   }
   
+  /* ---- Columns ---- */
+  
   .col {
-    display: inline-block;
-    margin-right: -4px;
+    float: left;
     padding-left: 1em;
     padding-right: 1em;
-    vertical-align: top;
-    width: 50%;
+  }
+  
+  .primary {
+    width: 40%;
+  }
+  
+  .secondary {
+    width: 60%;
+  }
+  
+  /* ---- Navigation ---- */
+  
+  .main-nav {
+    float: right;  
+  }
+  
+  .main-nav li,
+  .name {
+    float: left;
+  }
+  
+  .main-nav li {
+    margin-left: 12px;
   }
   
 }
