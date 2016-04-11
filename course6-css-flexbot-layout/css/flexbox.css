@@ -1,5 +1,25 @@
-/* ================================= 
-  Flexbox
-==================================== */
+/*************************************
+  FLEXBOX
+*************************************/
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 450px;
+}
 
+.item {
+  flex: 1 200px;
+}
+
+.item-1 {
+  align-self: flex-end;
+}
+
+.item-2 {
+  flex-grow: 2;
+}
+
+.item-4 {
+  align-self: center;
+}
