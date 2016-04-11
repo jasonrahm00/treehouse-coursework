@@ -21,7 +21,7 @@ ul {
 
 p {
   font-size: .95em;
-  margin-bottom: 1.8em;
+  margin: 0 0 1em 0;
 }
 
 h2,
@@ -32,7 +32,7 @@ a {
 
 h2,
 h3 {
-  margin-top: 0;
+  margin: 0 0 .8em 0;
 }
 
 a {
@@ -97,9 +97,10 @@ img {
 }
 
 .col {
-  padding-left: 1em;
-  padding-right: 1em;
-	
+  background: #edf4f7;
+  border-radius: .35em;
+  margin: 0 .5em .8em;
+  padding: 1em;	
 }
 
 .main-footer {
@@ -110,16 +111,25 @@ img {
 
 /* ---- Page Elements ---- */
 
-.logo {
-  width: 190px;
+
+.button {
+  background: #3acec2;
+  border-radius: .35em;
+  color: #fff;
+  padding: .625em 1.25em;
+  text-align: center;
+}
+
+.feat-img {
+  border-radius: 5px;
 }
 
 .headline {
   margin-bottom: 0;
 }
 
-.feat-img {
-  border-radius: 5px;
+.logo {
+  width: 190px;
 }
 
 
@@ -145,7 +155,7 @@ img {
   
   .main-header,
   .row {
-    width: 80%;
     max-width: 1150px;
+    width: 80%;
   }
 }

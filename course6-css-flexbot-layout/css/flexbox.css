@@ -3,7 +3,8 @@
 **************************************/
 
 @media (min-width: 769px) {
-
+  
+  .col,
   .main-header,
   .main-nav,
   .row {
@@ -16,15 +17,13 @@
   }
   
   .col {
-    flex: 1 50%;
+    flex: 1;
+    flex-direction: column;
   }
   
-  .row {
-    flex-wrap: wrap;
-  }
-  
-  .secondary {
-    order: -1;
+  .button {
+    align-self: flex-end;
+    margin-top: auto;
   }
   
 }
@@ -34,14 +33,6 @@
   .main-header {
     flex-direction: row;
     justify-content: space-between;
-  }
-  
-  .col {
-    flex-basis: 0;
-  }
-  
-  .primary {
-    flex-grow: 1.4;
   }
   
 }
