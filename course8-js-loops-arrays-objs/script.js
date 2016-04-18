@@ -1,67 +1,23 @@
-var html = '';
-var red;
-var green;
-var blue;
-var rgbColor;
+var rgbColor, html = '';
 
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
+// Generates random RGB color
+function getRGB() {
+  return Math.floor(Math.random() * 256);
+}
 
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
+// Creates a CSS rgb string by calling the getRGB function when each number is needed
+function randomColor() {
+  return 'rgb(' + getRGB() + ',' + getRGB() + ',' + getRGB() + ')';
+}
 
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
+function print(message) {
+  document.write(message);
+}
 
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
+// Generates 10 divs with random colurs by calling randomColor function and placing the RGB value in the style tag of the newly created div
+for (var i = 0; i < 10; i += 1) {
+  rgbColor = randomColor();
+  html += '<div style="background-color:' + rgbColor + '"></div>';
+}
 
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
-
-document.write(html);
+print(html);
