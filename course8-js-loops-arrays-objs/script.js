@@ -1,23 +1,22 @@
-var rgbColor, html = '';
-
-// Generates random RGB color
-function getRGB() {
-  return Math.floor(Math.random() * 256);
-}
-
-// Creates a CSS rgb string by calling the getRGB function when each number is needed
-function randomColor() {
-  return 'rgb(' + getRGB() + ',' + getRGB() + ',' + getRGB() + ')';
-}
+var playList = [
+  'Free Bird',
+  'Beautiful People',
+  'Coma White',
+  'Tainted Love',
+  'Sweet Child O\' Mine',
+  'When The Levee Breaks'
+]
 
 function print(message) {
   document.write(message);
 }
 
-// Generates 10 divs with random colurs by calling randomColor function and placing the RGB value in the style tag of the newly created div
-for (var i = 0; i < 10; i += 1) {
-  rgbColor = randomColor();
-  html += '<div style="background-color:' + rgbColor + '"></div>';
+function printList( list ) {
+  var listHTML = '<ol>';
+  for ( var i = 0; i < list.length; i += 1) {
+    listHTML += '<li>' + list[i] + '</li>';
+  }
+  listHTML += '</ol>';
+  print(listHTML);
 }
-
-print(html);
+printList(playList);
