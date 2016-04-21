@@ -1,22 +1,23 @@
-var playList = [
-  'Free Bird',
-  'Beautiful People',
-  'Coma White',
-  'Tainted Love',
-  'Sweet Child O\' Mine',
-  'When The Levee Breaks'
-]
+var inStock = ['apples', 'eggs', 'milk', 'cookies', 'cheese', 'bread', 'lettuce', 'carrots', 'broccoli', 'pizza', 'potatoes', 'crackers', 'onions', 'tofu', 'frozen dinner', 'cucumbers'];
+
+var search;
 
 function print(message) {
-  document.write(message);
+  document.write('<p>' + message + '</p>');
 }
 
-function printList( list ) {
-  var listHTML = '<ol>';
-  for ( var i = 0; i < list.length; i += 1) {
-    listHTML += '<li>' + list[i] + '</li>';
+while (true) {
+  search = prompt("Search for a product in our store. Type 'list' to show all of the products and 'quit' to exit.");
+  search = search.toLowerCase();
+  if (search === 'quit') {
+    break;
+  } else if (search === 'list') {
+    print(inStock.join(', '));
+  } else {
+    if (inStock.indexOf(search) > -1 ) {
+      print('Yes, we have ' + search + ' in the store.');
+    } else {
+      print(search + ' is not in stock.');
+    }
   }
-  listHTML += '</ol>';
-  print(listHTML);
 }
-printList(playList);
