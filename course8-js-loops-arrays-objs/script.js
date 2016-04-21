@@ -1,23 +1,22 @@
-var inStock = ['apples', 'eggs', 'milk', 'cookies', 'cheese', 'bread', 'lettuce', 'carrots', 'broccoli', 'pizza', 'potatoes', 'crackers', 'onions', 'tofu', 'frozen dinner', 'cucumbers'];
-
-var search;
+var playList = [
+  ['Free Bird', 'Lynyrd Skynyrd'],
+  ['Beautiful People', 'Marilyn Manson'],
+  ['Coma White', 'Marilyn Manson'],
+  ['Tainted Love', 'Marilyn Manson'],
+  ['Sweet Child O\' Mine', 'Guns N\' Roses'],
+  ['When The Levee Breaks', 'Led Zepplin']
+]
 
 function print(message) {
-  document.write('<p>' + message + '</p>');
+  document.write(message);
 }
 
-while (true) {
-  search = prompt("Search for a product in our store. Type 'list' to show all of the products and 'quit' to exit.");
-  search = search.toLowerCase();
-  if (search === 'quit') {
-    break;
-  } else if (search === 'list') {
-    print(inStock.join(', '));
-  } else {
-    if (inStock.indexOf(search) > -1 ) {
-      print('Yes, we have ' + search + ' in the store.');
-    } else {
-      print(search + ' is not in stock.');
-    }
+function printSongs( songs ) {
+  var listHTML = '<ol>';
+  for ( var i = 0; i < songs.length; i += 1) {
+    listHTML += '<li>' + songs[i][0] + ' by ' + songs[i][1] + '</li>';
   }
+  listHTML += '</ol>';
+  print(listHTML);
 }
+printSongs(playList);
