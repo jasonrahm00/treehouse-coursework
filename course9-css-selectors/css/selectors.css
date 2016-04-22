@@ -84,7 +84,7 @@ a[target="_blank"] {
     width: auto;
   }
   
-  /* Adjacent Sibling Selector */
+  /* Adjacent Sibling Selector (uses +) */
   /* Targets immediate sibling on the page */
   .btn + .btn {
     margin-left: 20px;
@@ -98,12 +98,12 @@ a[target="_blank"] {
   COMBINATORS
 ******************************/
 
-/* Direct Descendant Selector*/
+/* Direct Descendant Selector/Child Selector (uses >)*/
 form > a {
   font-size: .7em;
 }
 
-/* General Sibling Selector */
+/* General Sibling Selector (uses ~) */
 /* Targets every specified sibling that follows */
 
 /* Target all label elements that are siblings following an h1 */
