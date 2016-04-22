@@ -1,53 +1,72 @@
-/****************************************
+/********************************************
   BASE STYLES
-****************************************/
+********************************************/
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: #616161;
-  padding: 40px 0; 
-  margin: 0 auto;
+  line-height: 1.5;
+  color: #384047;
+  padding: 10px 0 80px;
 }
 
-h1 {
-  text-align: center;
+div {
+  max-width: 610px;
+  margin: auto;
 }
 
 ul {
   list-style: none;
-  width: 50%;
-  margin: auto;
+  padding: 0;
 }
 
 li {
-  border-bottom: 1px dotted #40918c;
-  padding: 15px 10px;
-}
-    
-
-
-/****************************************
-  STRUCTURAL PSEUDO-CLASSSES
-****************************************/
-
-li:first-child {
-  background: #52bab3;
-  color: white;
+  margin-bottom: 14px;
 }
 
-li:last-child {
-  border: none;
+a {
+  color: #4183c4;
 }
 
-/* Only Child Pseudo Class Selector */
-/* Targets child elements that have no siblings */
-span:only-child {
-  color: #52bab3;
-  font-size: 1.5em;
+
+
+/********************************************
+  SUBSTRING MATCHING ATTRIBUTE SELECTORS
+********************************************/
+
+/* Begins With Selector (character = ^) */
+a[href^="http:"] {
+  color: #52eab3;
+  text-decoration: none;
 }
 
-/* Empty Pseudo Class Selector */
-/* Targets element that has no content */
-li:empty {
-  background-color: tomato;
+/* Ends With Selector (character = $) */
+a[href$=".pdf"] {
+  background-image: url('../img/icn-pdf.svg');
 }
+
+a[href$=".jpg"] {
+  background-image: url('../img/icn-picture.svg');
+}
+
+a[href$=".zip"] {
+  background-image: url('../img/icn-zip.svg');
+}
+
+/* Contains Selector (character = *) */
+a[href*="downloads"] {
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  padding-left: 25px;
+}
+
+img[src*="thumb"] {
+  border: 2px solid;
+  height: 140px;
+  margin: 4px;
+  width: 180px;
+}
+
+img[src*="lake"] {
+  border-color: red;
+}
+
