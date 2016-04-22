@@ -1,0 +1,53 @@
+/****************************************
+  BASE STYLES
+****************************************/
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #616161;
+  padding: 40px 0; 
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  width: 50%;
+  margin: auto;
+}
+
+li {
+  border-bottom: 1px dotted #40918c;
+  padding: 15px 10px;
+}
+    
+
+
+/****************************************
+  STRUCTURAL PSEUDO-CLASSSES
+****************************************/
+
+li:first-child {
+  background: #52bab3;
+  color: white;
+}
+
+li:last-child {
+  border: none;
+}
+
+/* Only Child Pseudo Class Selector */
+/* Targets child elements that have no siblings */
+span:only-child {
+  color: #52bab3;
+  font-size: 1.5em;
+}
+
+/* Empty Pseudo Class Selector */
+/* Targets element that has no content */
+li:empty {
+  background-color: tomato;
+}
