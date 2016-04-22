@@ -1,72 +1,19 @@
-/********************************************
-  BASE STYLES
-********************************************/
-
-body {
-  font-family: 'Nunito', sans-serif;
-  line-height: 1.5;
-  color: #384047;
-  padding: 10px 0 80px;
-}
-
-div {
-  max-width: 610px;
-  margin: auto;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 14px;
-}
-
-a {
-  color: #4183c4;
+input:focus,
+textarea:focus {
+  border-color: #52bab3;
 }
 
 
 
-/********************************************
-  SUBSTRING MATCHING ATTRIBUTE SELECTORS
-********************************************/
+/****************************************
+  UI ELEMENT STATES PSEUDO-CLASSES
+****************************************/
 
-/* Begins With Selector (character = ^) */
-a[href^="http:"] {
-  color: #52eab3;
-  text-decoration: none;
+input:disabled {
+  background: #ddd;
 }
 
-/* Ends With Selector (character = $) */
-a[href$=".pdf"] {
-  background-image: url('../img/icn-pdf.svg');
+/* When an input of type checkbox has a state of checked, style rules are applied to the adjacent sibling label element */
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
 }
-
-a[href$=".jpg"] {
-  background-image: url('../img/icn-picture.svg');
-}
-
-a[href$=".zip"] {
-  background-image: url('../img/icn-zip.svg');
-}
-
-/* Contains Selector (character = *) */
-a[href*="downloads"] {
-  background-repeat: no-repeat;
-  background-size: 18px 18px;
-  padding-left: 25px;
-}
-
-img[src*="thumb"] {
-  border: 2px solid;
-  height: 140px;
-  margin: 4px;
-  width: 180px;
-}
-
-img[src*="lake"] {
-  border-color: red;
-}
-
