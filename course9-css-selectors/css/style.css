@@ -1,39 +1,63 @@
 /****************************************
-  ROOT PSEUDO CLASS
+  PSEUDO-CLASSES
 ****************************************/
 
-:root {
-  background: #e3effb;
+/* Target phone elements and apply classes without using extra HTML markup */
+
+/* :first-line of text in indicated elelment*/
+.intro:first-line {
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
-
-/****************************************
-  TARGET PSEUDO CLASS
-****************************************/
-
-:target {
+/* :first-letter of first line is targeted */
+/* Largely used for drop-caps */
+.intro:first-letter {
   background: #384047;
+  border-radius: 5px;
   color: white;
-}
-
-#col-c:target {
-  background: #eff1f2;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
-  color: initial;
+  float: left;
+  font-size: 80px;
+  line-height: 1;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
 }
 
 
 
 /****************************************
-  NEGATION (:not()) PSEUDO CLASS
+  PSEUDO-ELEMENTS
 ****************************************/
 
-/* Targets all other elements except the one indicated */
-input:not([type="submit"]) {
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, .15);
+/* Double colons (::) allow us to generate content before and after targeted elements wihout adding unncessary HTML markup */
+
+.jpg::before {
+  content: url(../img/icn-picture.svg);
+  margin-right: 8px;
 }
 
-.col:not(:first-child),
-nav a:not(:first-child) {
-  margin-left: 15px;
+.zip::before {
+  content: url(../img/icn-zip.svg);
+  margin-right: 8px;
+}
+
+h1::before,
+h1::after {
+  background: coral;
+  border-radius: 50%;
+  content:"";
+  display: inline-block;
+  height: 24px;
+  margin: 0 10px;
+  width: 24px;
+}
+
+/* Attribute function that inserts a elements attribute as page content */
+
+.d-loads a::after {
+  color: initial;
+  content: attr(title);
+  display: inline-block;
+  font-size: .65em;
+  margin-left: 5px;
 }
