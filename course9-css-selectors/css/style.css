@@ -5,37 +5,31 @@ body {
   padding: 40px 0;
 }
 
-ul {
-  list-style: none;
-  width: 50%;
+section {
   margin: auto;
+  width: 50%;
 }
 
-li {
+div {
   border-bottom: 1px dotted;
-  padding: 15px 10px;
+  padding: 18px 10px;
+  color: #777;
 }
 
-
-
-/**************************************
-  :nth-child PSEUDO CLASSES
-**************************************/
-
-li:last-child {
+div:last-child {
   border: none;
 }
 
-/* Select the forth item first then every third item thereafter */
-li:nth-child(3n+4) {
+/**************************************
+  :nth-of-type PSEUDO CLASSES
+**************************************/
+
+div:nth-of-type(even) {
   background: #52bab3;
   color: white;
 }
 
-li:nth-child(3) {
-  text-transform: uppercase;
-}
-
-li:nth-child(-n+3) {
+/* Starts with last element type and counts backwards based on the numebr in parentheses */
+div:nth-last-of-type(2) {
   font-style: italic;
 }
