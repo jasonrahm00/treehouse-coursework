@@ -1,19 +1,41 @@
-input:focus,
-textarea:focus {
-  border-color: #52bab3;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #616161;
+  padding: 40px 0;
+}
+
+ul {
+  list-style: none;
+  width: 50%;
+  margin: auto;
+}
+
+li {
+  border-bottom: 1px dotted;
+  padding: 15px 10px;
 }
 
 
 
-/****************************************
-  UI ELEMENT STATES PSEUDO-CLASSES
-****************************************/
+/**************************************
+  :nth-child PSEUDO CLASSES
+**************************************/
 
-input:disabled {
-  background: #ddd;
+li:last-child {
+  border: none;
 }
 
-/* When an input of type checkbox has a state of checked, style rules are applied to the adjacent sibling label element */
-input[type="checkbox"]:checked + label {
-  font-weight: bold;
+/* Select the forth item first then every third item thereafter */
+li:nth-child(3n+4) {
+  background: #52bab3;
+  color: white;
+}
+
+li:nth-child(3) {
+  text-transform: uppercase;
+}
+
+li:nth-child(-n+3) {
+  font-style: italic;
 }
