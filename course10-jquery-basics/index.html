@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign Up Form</title>
+	<title>Simple Drawing Application</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-  <form action="#" method="post">
-    <p>
-      <label for="username">Username</label>
-      <input id="username" name="username" type="text">
-    </p>
-    <p>
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password">
-      <span>Enter a password longer than 8 characters</span>
-    </p>
-    <p>
-      <label for="confirm_password">Confirm Password</label>
-      <input id="confirm_password" name="confirm_password" type="password">
-      <span>Please confirm your password</span>
-    </p>
-    <p>
-      <input type="submit" value="SUBMIT">
-    </p>
-  </form>
+  <canvas	width="600" height="400"></canvas>
+  <div class="controls">
+    <ul>
+      <li class="red selected"></li>
+      <li class="blue"></li>
+      <li class="yellow"></li>
+    </ul>
+    <button id="revealColorSelect">New Color</button>
+    <div id="colorSelect">
+      <span id="newColor"></span>
+      <div class="sliders">
+        <p>
+          <label for="red">Red</label>
+          <input id="red" name="red" type="range" min=0 max=255 value=0>
+        </p>
+        <p>
+          <label for="green">Green</label>
+          <input id="green" name="green" type="range" min=0 max=255 value=0>
+        </p>
+        <p>
+          <label for="blue">Blue</label>
+          <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+        </p>
+      </div>
+      <div>
+        <button id="addNewColor">Add Color</button>
+      </div>
+    </div>
+  </div>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>	
 </body>
 </html>
