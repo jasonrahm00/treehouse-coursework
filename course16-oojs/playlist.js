@@ -18,8 +18,6 @@ Playlist.prototype.renderInElement = function(list) {
 };
 
 Playlist.prototype.addVideo = function(a, b) {
-  console.log(a);
-  console.log(b);
   a.innerHTML = b.videoHtml();
 }
 
