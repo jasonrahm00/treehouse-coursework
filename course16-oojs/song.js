@@ -1,24 +1,20 @@
-function Song(title, artist, duration) {
+function Song(title, artist, duration, embed) {
   this.title = title;
   this.artist = artist;
   this.duration = duration;
-  this.isPlaying = false;
+  this.embed = embed;
+  this.isChosen = false;
 }
 
-Song.prototype.play = function() {
-  this.isPlaying = true;
-};
+Song.prototype.chose = function() {
+  this.isChosen = true;
+}
 
-Song.prototype.stop = function() {
-  this.isPlaying = false;
-};
-
-Song.prototype.toHTML = function() {
+Song.prototype.toHTML = function(a) {
   var htmlString = '<li';
-  if(this.isPlaying) {
-    htmlString += ' class="current">';
-  }
-  htmlString += '>';
+  htmlString += ' id="';
+  htmlString += a;
+  htmlString += '">';
   htmlString += this.title; 
   htmlString += ' - ';
   htmlString += this.artist;
@@ -27,3 +23,10 @@ Song.prototype.toHTML = function() {
   htmlString += '</span></li>';
   return htmlString;
 };
+
+Song.prototype.videoHtml = function() {
+  var videoCode = '<iframe src="';
+  videoCode += this.embed;
+  videoCode += '" frameborder="0" allowfullscreen></iframe>';
+  return videoCode;
+}
