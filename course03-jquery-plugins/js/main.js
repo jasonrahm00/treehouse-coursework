@@ -5,3 +5,13 @@ $(".animsition").animsition({
   inDuration: 1500,
   outDuration: 1000
 });
+
+$('.header').sticky();
+
+$('.header')
+  .on('sticky-start', function(){
+    $('.description').html('We Build <strong>great</strong> apps');
+  })
+  .on('sticky-end', function() {
+    $('.description').html('We Build apps');
+});
