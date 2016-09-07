@@ -13,9 +13,3 @@ http.createServer((request, response) => {
 }).listen(port);
 
 console.log(`Server running at http://${hostname}:${port}/`);
-
-
-
-//Function that handles the reading of template files and merge in values
-  //read from file and get a string
-    //merge values into string
