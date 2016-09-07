@@ -37,7 +37,7 @@ function getProfile(username) {
         }
       } else {
         //Status Code Error
-        printError({message: "There was an error gettign the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"});
+        printError({message: "There was an error getting the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"});
       }
     });
   });
