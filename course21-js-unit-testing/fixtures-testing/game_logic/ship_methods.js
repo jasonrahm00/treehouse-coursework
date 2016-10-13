@@ -1,5 +1,3 @@
-'use strict';
-
 function checkForShip(player, coordinates) {
   var shipPresent, ship;
   
