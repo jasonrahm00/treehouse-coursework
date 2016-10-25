@@ -1,0 +1,63 @@
+/****************************************
+  PSEUDO-CLASSES
+****************************************/
+
+/* Target phone elements and apply classes without using extra HTML markup */
+
+/* :first-line of text in indicated elelment*/
+.intro:first-line {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* :first-letter of first line is targeted */
+/* Largely used for drop-caps */
+.intro:first-letter {
+  background: #384047;
+  border-radius: 5px;
+  color: white;
+  float: left;
+  font-size: 80px;
+  line-height: 1;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+}
+
+
+
+/****************************************
+  PSEUDO-ELEMENTS
+****************************************/
+
+/* Double colons (::) allow us to generate content before and after targeted elements wihout adding unncessary HTML markup */
+
+.jpg::before {
+  content: url(../img/icn-picture.svg);
+  margin-right: 8px;
+}
+
+.zip::before {
+  content: url(../img/icn-zip.svg);
+  margin-right: 8px;
+}
+
+h1::before,
+h1::after {
+  background: coral;
+  border-radius: 50%;
+  content:"";
+  display: inline-block;
+  height: 24px;
+  margin: 0 10px;
+  width: 24px;
+}
+
+/* Attribute function that inserts a elements attribute as page content */
+
+.d-loads a::after {
+  color: initial;
+  content: attr(title);
+  display: inline-block;
+  font-size: .65em;
+  margin-left: 5px;
+}
