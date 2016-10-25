@@ -1,0 +1,10 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 0211-A3AB
+
+ Directory of C:\Users\Ares\OneDrive\Development\coding-coursework\treehouse-coursework
+
+10/25/2016  04:31 PM    <DIR>          .
+10/25/2016  04:31 PM    <DIR>          ..
+10/25/2016  04:31 PM                 0 deleteme.txt
+               1 File(s)              0 bytes
+               2 Dir(s)  75,187,986,432 bytes free
